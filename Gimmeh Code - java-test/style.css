@@ -4,6 +4,15 @@ body {
 	overflow-x: hidden;
 }
 
+article {
+	position: relative;
+
+}
+
+#indholdsArea {
+	margin-top: 4vw
+}
+
 #banner_img {
 	width: 100%;
 	height: 20vw;
@@ -102,20 +111,10 @@ body {
 
 .container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 3vw;
+	grid-template-columns: 1fr;
+	grid-gap: 2vw;
 
 }
-
-.postListview img {
-	width: 20vw;
-	height: 20vw;
-}
-
-.postListview {
-	text-align: center;
-}
-
 
 .pil_img {
 	width: 3vw;
@@ -129,8 +128,70 @@ body {
 
 }
 
+#template_container {
+	position: absolute;
+	bottom: 0vw;
+	background-color: black;
+	color: white;
+	margin: 0;
+	padding: 0;
+	width: 97vw;
+	height: 10vw;
+
+}
 
 
+#template_tittel {
+	position: absolute;
+	bottom: 5vw;
+	margin: 0;
+	left: 1vw;
+
+}
+
+#template_img {
+	width: 97vw;
+	z-index: -1;
+	margin: 0;
+	padding: 0;
+
+
+}
+
+
+
+#template_desc {
+	display: none;
+}
+
+#template_tid {
+	position: absolute;
+	right: 1vw;
+	bottom: 4vw;
+}
+
+#template_sted {
+	position: absolute;
+	right: 1vw;
+	bottom: 0;
+	margin: 0;
+
+}
+
+#template_genre {
+	position: absolute;
+	left: 1vw;
+	bottom: 2vw;
+	margin: 0;
+}
+
+#template_pris {
+	position: absolute;
+	right: 1vw;
+	bottom: 3.5vw;
+	margin: 0;
+
+}
 
 
 
@@ -284,12 +345,25 @@ a svg {
 #nyhedsbrev {
 
 	position: fixed;
-	bottom: 12vw;
+	bottom: 22vw;
 	right: 2vw;
 	z-index: 2;
+	cursor: pointer;
+
+}
+
+#nyhedsbrev:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+#nyhedsbrev:active {
+	transform: scale(0.95);
+	cursor: pointer;
 }
 
 #nyhedsbrevImg {
 	width: 13vw;
 	border-radius: 10vw;
+
 }
