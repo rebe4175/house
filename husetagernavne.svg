@@ -134,10 +134,16 @@
     </g>
     <g id="Biografen">
         <polygon id="plade-bio" fill="#0F1548" points="668.1,310.2 751,240.7 1104.6,241.9 1057,313.8 	" />
+
         <text id="tekst-bio" transform="matrix(1 0 0 1 748.7146 272.3502)">
             <tspan x="0" y="0" fill="#EFDAE1" font-family="Nunito" font-size="16px">HUSETS BIOGRAF</tspan>
+        </text>
+
+        <text id="tekst-vox" transform="matrix(1 0 0 1 748.7146 272.3502)">
             <tspan x="0" y="19.2" fill="#EFDAE1" font-family="Nunito" font-size="16px">VOX</tspan>
         </text>
+
+
         <g id="Biografen_1_">
 
             <rect x="668.7" y="309.5" fill="#D3EBF1" stroke="#000000" stroke-width="0.5" stroke-miterlimit="10" width="387.8" height="9.8" />
