@@ -47,7 +47,7 @@ article {
 	margin: 1.7vw 0 0 7.5vw;
 	padding: 0;
 	width: 25vw;
-	font-size: 2em;
+	font-size: 1.8em;
 	color: white;
 
 
@@ -448,5 +448,164 @@ a svg {
 
 .toggleShow {
 	opacity: 1 !important;
+
+}
+
+/*-------------------------------------------*/
+
+@media screen and (min-width: 1000px) {
+	.container {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-column: 2/5;
+		grid-gap: 1vw;
+	}
+	#indholdsArea {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+	#main {
+		margin-top: 15vw;
+	}
+
+	#template_img {
+		width: 20vw;
+	}
+	#template_container {
+		width: 20vw;
+		height: 5vw;
+	}
+	#sort_button {
+		height: 4vw;
+		width: 10vw;
+		top: 23vw;
+		margin: 0 0vw 0 17.5vw;
+
+	}
+	#sort_button P {
+		margin: 1vw 0 0 1vw;
+	}
+	#banner_img {
+		height: 25vw
+	}
+	#nyhedsbrev {
+		bottom: 2vw;
+		width: 5vw;
+		height: 5vw;
+	}
+	#nyhedsbrevForm {
+		bottom: 2vw;
+		width: 5vw;
+		height: 5vw;
+	}
+	#nyhedsbrevImg {
+		width: 5vw;
+	}
+	.toggleNyhedsbrev1 {
+		opacity: 1;
+		width: 20vw !important;
+		transition: 0.3s;
+	}
+
+	.toggleNyhedsbrev2 {
+		opacity: 1;
+		width: 5vw;
+	}
+	#nyhedsTxt {
+		opacity: 0;
+		transition: 1s;
+		margin: 1.5vw 0 0 2vw;
+	}
+
+	#nyhedsArea {
+		opacity: 0;
+		transition: 0.2s;
+		margin: 0vw 0 0 2vw;
+
+	}
+
+	#nyhedsSubmit {
+		opacity: 0;
+	}
+	.modal_knap img {
+		width: 10vw;
+	}
+	.modal_knap {
+		height: 10vw;
+	}
+	#modal_vindue {
+		height: 100%;
+
+	}
+	#menuVindue {
+		height: 40vw;
+		top: 5vw;
+	}
+	#footer {
+		width: 98.8vw;
+		border-style: solid;
+		border-color: black;
+		height: 10vw;
+		bottom: 0vw;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#footer li {
+		list-style: none;
+	}
+
+	#footerTxt {
+		background-color: #fce5f1;
+		margin: 0;
+		height: 10vw;
+	}
+
+	#footerLogo {
+		margin: 0;
+		height: 10vw;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+
+	}
+
+	.footerLogo_logo {
+		height: 4vw;
+		margin: 1vw 0 0 2vw;
+
+	}
+	.sponsor {
+		height: 8vw;
+	}
+	.sidenav a {
+		margin: 5vw 0 0 4vw;
+		text-decoration: none;
+		font-size: 2em;
+
+		color: #818181;
+		display: block;
+		transition: 0.3s
+	}
+
+	.pilHoejre {
+		transform: rotate(180deg);
+		position: absolute;
+		top: 3vw;
+		right: 3vw;
+		z-index: 40;
+
+	}
+	.pilVenstre {
+		transform: scale(1);
+	}
+
+	.pil_img {
+		width: 3vw;
+		right: 3vw;
+		top: 3vw;
+		position: absolute;
+
+		transform: scale(0.8);
+	}
+
 
 }

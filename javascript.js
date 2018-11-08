@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", getJSON);
 
 let events = [];
+let eventType;
 let postTemplate = document.querySelector("[data-template]");
 let postContainer = document.querySelector(".container");
-let kategoriFilter = "alle";
+let eventTypeFilter = "alle";
 let dest = document.querySelector(".data-container");
 
 async function getJSON() {
@@ -60,8 +61,10 @@ document.querySelectorAll(".sort_item").forEach(knap => {
 })
 
 function filtrering() {
-	dest.textContent = "";
-	kategorifilter = this.getAttribute("data-kategori");
+
+	console.log("filter Aply");
+	eventTypeFilter = this.getAttribute("data-eventType");
+	console.log(eventTypeFilter);
 	visPosts();
 }
 
@@ -70,9 +73,12 @@ function visPosts() {
 
 	console.log(events);
 
+
 	events.forEach(event => {
 
-		if (event.kategori == kategoriFilter || kategoriFilter == "alle") {
+		if (event.acf.eventType == eventTypeFilter || eventTypeFilter == "alle") {
+			console.log("klon");
+
 
 			let klon = postTemplate.cloneNode(true).content;
 			klon.querySelector("[data-title]").textContent = event.title.rendered;
