@@ -10,14 +10,15 @@ article {
 }
 
 #indholdsArea {
-	margin-top: 4vw
+	margin-top: 15vw;
 }
 
 #banner_img {
 	width: 100%;
-	height: 20vw;
+	height: 35vw;
 	object-fit: cover;
 	position: absolute;
+	z-index: 0;
 }
 
 #logo_frontsite {
@@ -26,20 +27,34 @@ article {
 	position: absolute;
 	top: 1vw;
 	left: 1vw;
-}
-
-#sort_button img {
-	width: 100%;
-	height: 10vw;
-	object-fit: cover;
+	z-index: 2;
 }
 
 #sort_button {
 	width: 40vw;
 	height: 10vw;
-	z-index: 2;
-	margin: auto;
+	z-index: 3;
+	left: 30%;
+	top: 28vw;
+	position: absolute;
+	background-color: black;
+	border-radius: 10vw;
 
+
+}
+
+#sort_button p {
+	margin: 1.7vw 0 0 7.5vw;
+	padding: 0;
+	width: 25vw;
+	font-size: 2em;
+	color: white;
+
+
+}
+
+#sort_button a {
+	text-decoration: none;
 }
 
 #sort_button:hover {
@@ -56,20 +71,48 @@ article {
 	position: absolute;
 	top: 0;
 	opacity: 0;
-	background-color: rgba(89, 89, 89, 0.9);
+	background-color: rgba(0, 0, 0, 0.9);
 	width: 100vw;
-	height: 100%;
+	height: 200%;
 	pointer-events: none;
 	transition: 0.5s;
 	z-index: 10;
+
 }
 
 #menuVindue {
-	background-color: lightgray
+	background-color: rgb(157, 157, 157);
+	position: absolute;
+	width: 80vw;
+	height: 120vw;
+	top: 20vw;
+	left: 9vw;
+	display: grid;
+	margin: 0;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	z-index: 11;
 }
 
+
 .modal_knap img {
-	width: 10vw;
+	width: 40vw;
+
+	margin-bottom: -29vw;
+	z-index: 19;
+}
+
+.modal_knap p {
+	text-align: center;
+	font-size: 2em;
+	z-index: 20;
+	color: white;
+
+
+}
+
+.modal_knap {
+	height: 40vw;
 }
 
 
@@ -77,21 +120,25 @@ article {
 	width: 96.5vw;
 	border-style: solid;
 	border-color: black;
-	height: 10vw;
+	height: 20vw;
 	bottom: 0vw;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
 
+#footer li {
+	list-style: none;
+}
+
 #footerTxt {
-	background-color: lightcoral;
+	background-color: #fce5f1;
 	margin: 0;
-	height: 10vw;
+	height: 20vw;
 }
 
 #footerLogo {
 	margin: 0;
-	height: 10vw;
+	height: 20vw;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 
@@ -103,7 +150,6 @@ article {
 }
 
 .sponsor {
-	width: 9vw;
 	height: 9vw;
 	object-fit: cover;
 
@@ -125,6 +171,7 @@ article {
 	position: absolute;
 	top: 3vw;
 	right: 3vw;
+	z-index: 40;
 
 }
 
@@ -215,7 +262,7 @@ article {
 
 	position: fixed;
 
-	z-index: 3;
+	z-index: 30;
 
 	top: 0;
 	right: 0;
@@ -347,23 +394,59 @@ a svg {
 	position: fixed;
 	bottom: 22vw;
 	right: 2vw;
-	z-index: 2;
+
 	cursor: pointer;
 
-}
-
-#nyhedsbrev:hover {
-	transform: scale(1.05);
-	cursor: pointer;
-}
-
-#nyhedsbrev:active {
-	transform: scale(0.95);
-	cursor: pointer;
 }
 
 #nyhedsbrevImg {
 	width: 13vw;
 	border-radius: 10vw;
+	z-index: 2;
+
+}
+
+#nyhedsbrevForm {
+	background-color: #fce5f1;
+	position: inherit;
+
+	height: 13vw;
+	bottom: 22.7vw;
+	z-index: -1;
+	border-radius: 10vw;
+
+}
+
+#nyhedsTxt {
+	opacity: 0;
+	transition: 1s;
+	margin: 4vw 0 0 4vw;
+}
+
+#nyhedsArea {
+	opacity: 0;
+	transition: 0.2s;
+	margin: 0vw 0 0 4vw;
+
+}
+
+#nyhedsSubmit {
+	opacity: 0;
+}
+
+.toggleNyhedsbrev1 {
+	opacity: 1;
+	width: 60vw;
+	right: 2vw;
+	transition: 0.3s;
+}
+
+.toggleNyhedsbrev2 {
+	opacity: 1;
+	width: 13vw;
+}
+
+.toggleShow {
+	opacity: 1 !important;
 
 }
