@@ -6,14 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let postContainer = document.querySelector(".container");
     let kategoriFilter = "alle";
     let dest = document.querySelector(".data-container");
-    let mySvg = await fetch("husetagernavne.svg");
-    let svg = await mySvg.text();
 
 });
 
 async function svgProgram() {
 
-
+    let mySvg = await fetch("husetagernavne.svg");
+    let svg = await mySvg.text();
 
     document.querySelector("#house").innerHTML = svg;
 
@@ -25,6 +24,7 @@ async function getJSON() {
 
     let musicJson = await fetch("http://ceciliewig.com/kea/07-cms/huset_kbh/wordpress/wp-json/wp/v2/musikevents");
     let musicev = await musicJson.json();
+    document.querySelector("#house").innerHTML = svg;
 
     musicev.forEach(event => {
 

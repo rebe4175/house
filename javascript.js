@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", getJSON);
 
 let events = [];
 let postTemplate = document.querySelector("[data-template]");
-let postContainer = document.querySelector("[data-container]");
+let postContainer = document.querySelector(".container");
+let kategoriFilter = "alle";
+let dest = document.querySelector(".data-container");
 
 async function getJSON() {
 
@@ -53,21 +55,37 @@ async function getJSON() {
 	visPosts();
 }
 
+document.querySelectorAll(".sort_item").forEach(knap => {
+	knap.addEventListener("click", filtrering);
+})
+
+function filtrering() {
+	dest.textContent = "";
+	kategorifilter = this.getAttribute("data-kategori");
+	visPosts();
+}
+
+
 function visPosts() {
 
 	console.log(events);
 
 	events.forEach(event => {
-		let klon = postTemplate.cloneNode(true).content;
-		klon.querySelector("[data-title]").textContent = event.title.rendered;
-		klon.querySelector("[data-img]").setAttribute("src", event.acf.billede);
-		klon.querySelector("[data-text]").innerHTML = event.content.rendered;
-		klon.querySelector("[data-tid]").textContent = "Tidspunkt: " + event.acf.dato + " " + "kl " + event.acf.tid;
-		klon.querySelector("[data-sted]").textContent = "Sted: " + event.acf.sted;
-		klon.querySelector("[data-genre]").textContent = "Genre: " + " " + event.acf.genre;
-		klon.querySelector("[data-pris]").textContent = "Pris: " + event.acf.pris + " " + "kr ";
-		postContainer.appendChild(klon);
+
+		if (event.kategori == kategoriFilter || kategoriFilter == "alle") {
+
+			let klon = postTemplate.cloneNode(true).content;
+			klon.querySelector("[data-title]").textContent = event.title.rendered;
+			klon.querySelector("[data-img]").setAttribute("src", event.acf.billede);
+			klon.querySelector("[data-text]").innerHTML = event.content.rendered;
+			klon.querySelector("[data-tid]").textContent = "Tidspunkt: " + event.acf.dato + " " + "kl " + event.acf.tid;
+			klon.querySelector("[data-sted]").textContent = "Sted: " + event.acf.sted;
+			klon.querySelector("[data-genre]").textContent = "Genre: " + " " + event.acf.genre;
+			klon.querySelector("[data-pris]").textContent = "Pris: " + event.acf.pris + " " + "kr ";
+			postContainer.appendChild(klon);
+		}
 	})
+
 }
 
 
@@ -97,5 +115,16 @@ function visModal() {
 function lukModal() {
 	document.getElementById("modal_vindue").style.opacity = "0";
 	document.getElementById("modal_vindue").style.pointerEvents = "none";
-	console.log("luk Modal")
+	console.log("luk Modal");
+}
+
+function visForm() {
+	document.getElementById("nyhedsbrevForm").classList.toggle("toggleNyhedsbrev1");
+	document.getElementById("nyhedsbrevForm").classList.toggle("toggleNyhedsbrev2");
+
+	document.getElementById("nyhedsTxt").classList.toggle("toggleShow");
+	document.getElementById("nyhedsArea").classList.toggle("toggleShow");
+	document.getElementById("nyhedsSubmit").classList.toggle("toggleShow");
+
+
 }
